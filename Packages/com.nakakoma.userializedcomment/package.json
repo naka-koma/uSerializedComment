@@ -1,0 +1,7 @@
+{
+  "name": "com.nakakoma.userializedcomment",
+  "version": "1.0.0",
+  "displayName": "uSerializedComment",
+  "unity": "6000.0", 
+  "description": "Editor extension to leave serialized comments for each object."
+}
