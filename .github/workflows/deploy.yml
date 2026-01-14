@@ -1,0 +1,21 @@
+name: Deploy Package to Main
+
+on:
+  push:
+    branches:
+      - develop  # 開発用ブランチ
+
+jobs:
+  split-upm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Split Subtree
+        run: |
+          # mainブランチを現在のPackagesフォルダの中身で上書きする
+          git subtree split --prefix=Packages/com.yourname.yourpackage --branch main
+          git push origin main --force
