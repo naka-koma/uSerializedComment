@@ -17,5 +17,5 @@ jobs:
       - name: Split Subtree
         run: |
           # mainブランチを現在のPackagesフォルダの中身で上書きする
-          git subtree split --prefix=Packages/com.yourname.yourpackage --branch main
+          git subtree split --prefix=Packages/com.nakakoma.userializedcomment --branch main
           git push origin main --force
